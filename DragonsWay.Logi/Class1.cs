@@ -3,12 +3,14 @@
     public class DragonWay
     {
         private char[,] _way;
+        public string[] _wayout;
 
         public DragonWay(int n,string way)
         {
             Way = way;
             N = n;
             _way = new char[N,N*2];
+            _wayout = new string[100];
             Game();
         }
         public int N { get; }
@@ -62,27 +64,36 @@
             }
         }
 
-        private void FindWayOut()//"→→→↓↓↓→→→↓↓↓→→→→→→→→→↓→→→→→→"
+        public void FindWayOut()//"→→→↓↓↓→→→↓↓↓→→→→→→→→→↓→→→→→→"
         {
-            for (int i = 1; i < N; i++)
+            for (int i = 1; i < N-1; i++)
             {
-                for (int j = 0; j < N * 2; j++)
+                for (int j = 1; j < N * 2 - 2; j++)
                 {
-                    if (Way == "→") 
+                    if (Way[0] == '→') 
                     {
                         _way[i, j] = '→';
+                       
+                    }
+                    if (Way == "↓") 
+                    {
+                        _way[i, j] = '↓';
+
                     }
                 }
 
             }
         }
+    
 
         private void Game()
         {
             FillBorders();
             FindWayOut();
+        
         }
 
+      
     }
 }
 

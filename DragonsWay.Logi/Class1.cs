@@ -64,7 +64,7 @@
             }
         }
 
-        public void FindWayOut()//"→→→↓↓↓→→→↓↓↓→→→→→→→→→↓→→→→→→"
+        public void FindWayOut()
         {
             for (int i = 1; i < N-1; i++)
             {

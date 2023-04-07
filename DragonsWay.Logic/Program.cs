@@ -7,13 +7,13 @@ Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine(game);
 Console.BackgroundColor = ConsoleColor.Black;
 
-if (game.Win)
+if (game.Win())
 {
-    Console.WriteLine("The dragon is free!");
+    Console.WriteLine("The dragon is free!   :)");
 }
 else
 {
-    Console.WriteLine("The dragon die... sorry");
+    Console.WriteLine("The dragon die... sorry   :(");
 }
 
  

@@ -86,7 +86,7 @@
         }
         public bool Win()
         {
-            if (_way[N - 1,N - 1] == '→') 
+            if (_way[N - 1,N * 2 - 1] == '→') 
             {
                 return true;
             }
@@ -101,7 +101,6 @@
         {
             FillBorders();
             FindWayOut();
-            Win();
             
         }
 

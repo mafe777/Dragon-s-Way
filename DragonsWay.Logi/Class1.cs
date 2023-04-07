@@ -84,16 +84,28 @@
 
             }
         }
-    
+        public bool Win()
+        {
+            if (_way[N - 1,N - 1] == '→') 
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+        }
 
         private void Game()
         {
             FillBorders();
             FindWayOut();
-        
+            Win();
+            
         }
 
-      
+       
     }
 }
 
